@@ -502,32 +502,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.left-0 {
-  left: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.left-10 {
-  left: 2.5rem;
-}
-
 .float-right {
   float: right;
 }
 
-.clear-left {
-  clear: left;
-}
-
 .clear-right {
   clear: right;
-}
-
-.clear-none {
-  clear: none;
 }
 
 .m-auto {
@@ -539,16 +519,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 4rem;
 }
 
-.ml-24 {
-  margin-left: 6rem;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -559,21 +532,90 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: table;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-6\/12 {
+  width: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
+}
+
 .table-auto {
   table-layout: auto;
+}
+
+.border-collapse {
+  border-collapse: collapse;
 }
 
 .justify-end {
   justify-content: flex-end;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-x-2 {
+  border-left-width: 2px;
+  border-right-width: 2px;
+}
+
+.border-y-2 {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
+.border-l {
+  border-left-width: 1px;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-y-bubble-gum {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(255 119 233 / var(--tw-border-opacity));
+  border-bottom-color: rgb(255 119 233 / var(--tw-border-opacity));
+}
+
 .bg-myblue {
   --tw-bg-opacity: 1;
   background-color: rgb(22 42 70 / var(--tw-bg-opacity));
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .p-2 {
@@ -594,14 +636,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
