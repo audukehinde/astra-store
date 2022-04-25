@@ -9,16 +9,16 @@
 </head>
 <body>
  <div class="bg-myblue"><h2 class="text-center py-3 text-white text-2xl font-bold">ADMIN DASHBOARD</h2></div>
-  <div class="container m-auto w-8/12">
-    <div class="flex justify-end"><button class="bg-myblue text-white my-8 p-2 font-bold text-2xl">Add Product</button></div>
+  <div class="container m-auto w-full">
+    <div class="flex justify-end"><button class="bg-myblue text-white my-8 p-2 font-bold text-2xl" id="main-add">Add Product</button></div>
     
     <!-- <div class="clear-right"></div> -->
     <table class="table-auto m-auto border-collapse border-2 w-full">
       <thead>
-        <tr class="px-8 text-center">
-          <th class="px-8 text-center ">S/N</th>
+        <tr class=" border-b-2 bg-myblue text-white text-xl">
+          <th class="px-8 text-center py-2">S/N</th>
           <th class="px-8 text-center ">Picture</th>
-          <th class="px-8 text-center">Products</th>
+          <th class="px-8 text-center">Name</th>
           <th class="px-8 text-center">Quantity</th>
           <th class="px-8 text-center">Price</th>
           <th class="px-8 text-center">Description</th>
@@ -26,18 +26,57 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="px-8 text-center">1</td>
-          <td class="px-8 text-center">The Sliding</td>
-          <td class="px-8 text-center">Malcolm</td>
-          <td class="px-8 text-center">40</td>
-          <td class="px-8 text-center">4000</td>
-          <td class="px-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate!</td>
-          <td class="px-8 text-center">Delete Edit</td>
+        <tr class="border-b-2">
+          <td class="px-8">1</td>
+          <td class="px-8">The Sliding</td>
+          <td class="px-8">Malcolm</td>
+          <td class="px-8">40</td>
+          <td class="px-8">4000</td>
+          <td class="px-8">Lorem, ipsum dolor sit amet consectetur</td>
+          <td class="px-8">Delete Edit</td>
+        </tr>
+        <tr class="border-b-2">
+          <td class="px-8">1</td>
+          <td class="px-8">The Sliding</td>
+          <td class="px-8">Malcolm</td>
+          <td class="px-8">40</td>
+          <td class="px-8">4000</td>
+          <td class="px-8">Lorem, ipsum dolor sit amet consectetur</td>
+          <td class="px-8">Delete Edit</td>
         </tr>
       </tbody>
     </table>
   </div>
+  
+  <section class="m-8 hidden" id="form-container">
+    <form class="bg-myblue w-3/12 m-auto p-4">  
+      <div class="flex justify-end text-red text-3xl cursor-pointer" id="close"><h1>X</h1></div>
+      <div class="flex flex-col mb-2">
+        <label for="Picture" class="text-white">Picture</label>
+        <input type="jpeg" placeholder="Upload Picture" class="p-1 outline-none">
+      </div>
+      <div class="flex flex-col mb-2">
+        <label for="text" class="text-white">Product Name</label>
+        <input type="text" placeholder="Product Name" class="p-1 outline-none">
+      </div>
+      <div class="flex flex-col mb-2">
+        <label for="text" class="text-white">Product Quantity</label>
+        <input type="numb er" placeholder="Product Quantity" class="p-1 outline-none">
+      </div> 
+      <div class="flex flex-col mb-2"> 
+        <label for="text" class="text-white">Price</label>
+        <input type="numb er" placeholder="Price" class="p-1 outline-none">
+      </div> 
+      <div class="flex flex-col mb-2"> 
+        <label for="text" class="text-white">Description</label>
+        <input type="text" placeholder="Description" class="p-1 outline-none">
+      </div>
+      <div class="flex justify-end">
+        <button class="border-2 p-2 mt-4 text-white">Add Product</button>
+      </div>
+    </form>
+  </section>
+
   <script src="admin.js "></script>
 </body>
 </html>

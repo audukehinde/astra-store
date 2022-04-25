@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     colors: {
       myblue: '#162A46',
-      current: 'currentColor',
+      red: '#FF0000',
       'white': '#ffffff',
       'purple': '#3f3cbb',
       'midnight': '#121063',
