@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  />
     <title>Admin | Add Products</title>
   </head>
   <body class="bg-silver">
-    <div class="bg-myblue text-white py-2 font-bold text-center md:text-2xl">
+    <div class="bg-myblue w-full text-white py-2 font-bold text-center md:text-2xl">
       ADMIN DASHBOARD
     </div>
     <div class="container mx-auto w-full">
@@ -30,8 +34,8 @@
             <th class="px-8 text-center">Action</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="border-b-2">
+        <tbody id="table-body">
+          <!-- <tr class="border-b-2">
             <td class="px-8">1</td>
             <td class="px-8">Malcolm</td>
             <td class="px-8">40</td>
@@ -46,49 +50,49 @@
             <td class="px-8">4000</td>
             <td class="px-8">Lorem, ipsum dolor sit</td>
             <td class="px-8">Delete Edit</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
 
     <section class="mx-auto hidden container" id="form-container">
       <div class="my-8">
-        <form class="bg-myblue px-8 py-4 m-auto md:w-5/12">
+        <form class="bg-myblue px-8 py-4 m-auto md:w-5/12" id="form">
           <div
             class="flex justify-end text-red text-2xl cursor-pointer"
             id="close">
             <h1 class="bg-white px-2">X</h1>
           </div>
-          <div class="flex flex-col mb-2">
+          <!-- <div class="flex flex-col mb-2">
             <label for="Picture" class="text-white mb-2">Picture</label>
             <input
               type="jpeg"
               placeholder="Upload Picture"
-              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red" id=""
             />
-          </div>
+          </div> -->
           <div class="flex flex-col mb-2">
             <label for="text" class="text-white mb-2">Product Name</label>
             <input
               type="text"
               placeholder="Product Name"
-              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red" id="product-name"
             />
           </div>
           <div class="flex flex-col mb-2">
             <label for="text" class="text-white mb-2">Product Quantity</label>
             <input
-              type="numb er"
+              type="number"
               placeholder="Product Quantity"
-              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red" id="quantity"
             />
           </div>
           <div class="flex flex-col mb-2">
             <label for="text" class="text-white mb-2">Price</label>
             <input
-              type="numb er"
+              type="number"
               placeholder="Price"
-              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red" id="price"
             />
           </div>
           <div class="flex flex-col mb-2">
@@ -96,13 +100,12 @@
             <input
               type="text"
               placeholder="Description"
-              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red" id="desc"
             />
           </div>
           <div class="flex justify-end">
             <button
-              class="border-2 p-2 mt-4 text-white rounded-lg shadow-sm focus:outline-none focus:border-red"
-            >
+              class="border-2 p-2 mt-4 text-white rounded-lg shadow-sm focus:outline-none focus:border-red" id="btn-submit-product">
               Add Product
             </button>
           </div>
