@@ -1,82 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
-  <title>Admin | Add Products</title>
-</head>
-<body>
- <div class="bg-myblue"><h2 class="text-center py-3 text-white text-2xl font-bold">ADMIN DASHBOARD</h2></div>
-  <div class="container m-auto w-full">
-    <div class="flex justify-end"><button class="bg-myblue text-white my-8 p-2 font-bold text-2xl" id="main-add">Add Product</button></div>
-    
-    <!-- <div class="clear-right"></div> -->
-    <table class="table-auto m-auto border-collapse border-2 w-full">
-      <thead>
-        <tr class=" border-b-2 bg-myblue text-white text-xl">
-          <th class="px-8 text-center py-2">S/N</th>
-          <th class="px-8 text-center ">Picture</th>
-          <th class="px-8 text-center">Name</th>
-          <th class="px-8 text-center">Quantity</th>
-          <th class="px-8 text-center">Price</th>
-          <th class="px-8 text-center">Description</th>
-          <th class="px-8 text-center">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="border-b-2">
-          <td class="px-8">1</td>
-          <td class="px-8">The Sliding</td>
-          <td class="px-8">Malcolm</td>
-          <td class="px-8">40</td>
-          <td class="px-8">4000</td>
-          <td class="px-8">Lorem, ipsum dolor sit amet consectetur</td>
-          <td class="px-8">Delete Edit</td>
-        </tr>
-        <tr class="border-b-2">
-          <td class="px-8">1</td>
-          <td class="px-8">The Sliding</td>
-          <td class="px-8">Malcolm</td>
-          <td class="px-8">40</td>
-          <td class="px-8">4000</td>
-          <td class="px-8">Lorem, ipsum dolor sit amet consectetur</td>
-          <td class="px-8">Delete Edit</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
-  <section class="m-8 hidden" id="form-container">
-    <form class="bg-myblue w-3/12 m-auto p-4">  
-      <div class="flex justify-end text-red text-3xl cursor-pointer" id="close"><h1>X</h1></div>
-      <div class="flex flex-col mb-2">
-        <label for="Picture" class="text-white">Picture</label>
-        <input type="jpeg" placeholder="Upload Picture" class="p-1 outline-none">
-      </div>
-      <div class="flex flex-col mb-2">
-        <label for="text" class="text-white">Product Name</label>
-        <input type="text" placeholder="Product Name" class="p-1 outline-none">
-      </div>
-      <div class="flex flex-col mb-2">
-        <label for="text" class="text-white">Product Quantity</label>
-        <input type="numb er" placeholder="Product Quantity" class="p-1 outline-none">
-      </div> 
-      <div class="flex flex-col mb-2"> 
-        <label for="text" class="text-white">Price</label>
-        <input type="numb er" placeholder="Price" class="p-1 outline-none">
-      </div> 
-      <div class="flex flex-col mb-2"> 
-        <label for="text" class="text-white">Description</label>
-        <input type="text" placeholder="Description" class="p-1 outline-none">
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Admin | Add Products</title>
+  </head>
+  <body class="bg-silver">
+    <div class="bg-myblue text-white py-2 font-bold text-center md:text-2xl">
+      ADMIN DASHBOARD
+    </div>
+    <div class="container mx-auto w-full">
       <div class="flex justify-end">
-        <button class="border-2 p-2 mt-4 text-white">Add Product</button>
+        <button class="bg-myblue text-white my-8 p-2 font-bold md:text-xl" id="main-add">
+          Add Product
+        </button>
       </div>
-    </form>
-  </section>
 
-  <script src="admin.js "></script>
-</body>
+      
+      <table class="table-auto mx-auto border-collapse border-2 w-full container">
+        <thead>
+          <tr class="border-b-2 bg-myblue text-white text-xl">
+            <th class="px-8 text-center py-2">S/N</th>
+            <th class="px-8 text-center">Name</th>
+            <th class="px-8 text-center">Quantity</th>
+            <th class="px-8 text-center">Price</th>
+            <th class="px-8 text-center">Description</th>
+            <th class="px-8 text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b-2">
+            <td class="px-8">1</td>
+            <td class="px-8">Malcolm</td>
+            <td class="px-8">40</td>
+            <td class="px-8">4000</td>
+            <td class="px-8">Lorem, ipsum dolor sit</td>
+            <td class="px-8">Delete Edit</td>
+          </tr>
+          <tr class="border-b-2">
+            <td class="px-8">2</td>
+            <td class="px-8">Malcolm</td>
+            <td class="px-8">40</td>
+            <td class="px-8">4000</td>
+            <td class="px-8">Lorem, ipsum dolor sit</td>
+            <td class="px-8">Delete Edit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="mx-auto hidden container" id="form-container">
+      <div class="my-8">
+        <form class="bg-myblue px-8 py-4 m-auto md:w-5/12">
+          <div
+            class="flex justify-end text-red text-2xl cursor-pointer"
+            id="close">
+            <h1 class="bg-white px-2">X</h1>
+          </div>
+          <div class="flex flex-col mb-2">
+            <label for="Picture" class="text-white mb-2">Picture</label>
+            <input
+              type="jpeg"
+              placeholder="Upload Picture"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+            />
+          </div>
+          <div class="flex flex-col mb-2">
+            <label for="text" class="text-white mb-2">Product Name</label>
+            <input
+              type="text"
+              placeholder="Product Name"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+            />
+          </div>
+          <div class="flex flex-col mb-2">
+            <label for="text" class="text-white mb-2">Product Quantity</label>
+            <input
+              type="numb er"
+              placeholder="Product Quantity"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+            />
+          </div>
+          <div class="flex flex-col mb-2">
+            <label for="text" class="text-white mb-2">Price</label>
+            <input
+              type="numb er"
+              placeholder="Price"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+            />
+          </div>
+          <div class="flex flex-col mb-2">
+            <label for="text" class="text-white mb-2">Description</label>
+            <input
+              type="text"
+              placeholder="Description"
+              class="p-1 outline-none rounded-lg shadow-sm focus:outline-none focus:border-red"
+            />
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="border-2 p-2 mt-4 text-white rounded-lg shadow-sm focus:outline-none focus:border-red"
+            >
+              Add Product
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="admin.js "></script>
+  </body>
 </html>
