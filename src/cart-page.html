@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="h-screen w-full bg-mainBlue p-10">
+    <div
+      class="flex flex-col shopping-card w-full h-full bg-white mx-auto shadow-sm md:flex-row"
+    >
+      <div class="shopping-card py-10 w-full md:w-3/4 px-6 divide-y-2">
+        <div class="shopping-title flex justify-between">
+          <h2 class="text-2xl font-semibold">Shopping Cart</h2>
+          <p>3 Items</p>
+        </div>
+        <div class="cart-list text-sm md:text-base w-full">
+          <div class="cart-list--head flex justify-between text-base text-gray-600 font-bold my-5">
+            <p >PRODUCT DETAILS</p>
+            <p >QUANTITY</p>
+            <p >PRICE</p>
+            <p >TOTAL</p>
+          </div>
+          <div class="cart-list--body max-h-96 overflow-auto">
+            <div class="cart-item flex justify-between w-full mb-10">
+              <div class="product-details flex space-x-4">
+                <div class="h-28 w-28">
+                  <img src="./img/product1.png" alt="product 1" />
+                </div>
+                <div class="product-text flex flex-col justify-evenly">
+                  <p class="font-medium text-lg" >pringles</p>
+                  <p class="font-medium text-lg text-secondaryPink">snack</p>
+                  <button class="text-gray-400">remove</button>
+                </div>
+              </div>
+
+              <div class="product-quantity">
+            
+
+                <input class="w-10 border border-gray-400" type="number" value="1" min="1"></input>
+
+                
+              </div>
+
+              <div class="product-price">
+                <p class="font-medium text-gray-500" >N500</p>
+              </div>
+
+              <div class="total-price">
+                <p class="font-medium text-gray-500"  >N1000</p>
+              </div>
+            </div>
+            <div class="cart-item flex justify-between w-full mb-10">
+                <div class="product-details flex space-x-4">
+                  <div class="h-28 w-28">
+                    <img src="./img/product1.png" alt="product 1" />
+                  </div>
+                  <div class="product-text flex flex-col justify-evenly">
+                    <p class="font-medium text-lg" >pringles</p>
+                    <p class="font-medium text-lg text-secondaryPink">snack</p>
+                    <button class="text-gray-400">remove</button>
+                  </div>
+                </div>
+  
+                <div class="product-quantity">
+              
+  
+                  <input class="w-10 border border-gray-400" type="number" value="1" min="1"></input>
+  
+                  
+                </div>
+  
+                <div class="product-price">
+                  <p class="font-medium text-gray-500" >N500</p>
+                </div>
+  
+                <div class="total-price">
+                  <p class="font-medium text-gray-500"  >N1000</p>
+                </div>
+              </div>
+
+              <div class="cart-item flex justify-between w-full mb-10">
+                <div class="product-details flex space-x-4">
+                  <div class="h-28 w-28">
+                    <img src="./img/product1.png" alt="product 1" />
+                  </div>
+                  <div class="product-text flex flex-col justify-evenly">
+                    <p class="font-medium text-lg" >pringles</p>
+                    <p class="font-medium text-lg text-secondaryPink">snack</p>
+                    <button class="text-gray-400">remove</button>
+                  </div>
+                </div>
+  
+                <div class="product-quantity">
+              
+  
+                  <input class="w-10 border border-gray-400" type="number" value="1" min="1"></input>
+  
+                  
+                </div>
+  
+                <div class="product-price">
+                  <p class="font-medium text-gray-500" >N500</p>
+                </div>
+  
+                <div class="total-price">
+                  <p class="font-medium text-gray-500"  >N1000</p>
+                </div>
+              </div>
+
+            
+          </div>
+        </div>
+      </div>
+      <div class="order-summary h-full bg-gray-300 mt-20 w-full md:m-0 md:h-full md:w-1/4 md:bg-mainGray">
+          <div class="divide-y-2 py-10 flex flex-col justify-between h-full w-full px-6 divide-gray-400">
+            <div class="shopping-title">
+                <h2 class="text-xl font-medium">Order Summary</h2>
+                
+              </div>
+            <div>
+                <div class="shipping-title flex justify-between text-base font-semibold text-gray-600 my-5">
+                    <h2>ITEMS 3</h2>
+                    <p>N5000</p>
+                  </div>
+
+                  <div class="shipping-input">
+                    <label for="shipping-field"> SHIPPING</label>
+
+                        <select class="w-full my-4 px-4 h-14 shadow text-gray-500 " style="box-shadow:inset 0 4px 1px rgb(0, 0, 0, 0.2);" name="shipping" id="shipping-field">
+                        <option value="standard">Standard shipping - N500</option>
+                        <option value="medium">Classic Shipping N1500</option>
+                        <option value="King">King Shipping - N5000</option>
+                        
+                        </select>
+
+                  </div>
+
+                  <div class="promo-input divide-y-2">
+                    <label for="shipping-field"> PROMO</label>
+
+                        <input class="w-full my-4 h-14 shadow px-4" placeholder="Enter your code"  style="box-shadow:inset 0 4px 1px rgb(0, 0, 0, 0.2);" name="shipping" id="shipping-field">
+                        <button class="bg-buttonPink my-6 h-14 text-white font-medium p-4">APPLY</button>
+
+                  </div>
+
+
+            </div>
+
+            <div class="">
+                 <div class="flex justify-between my-4">
+
+                    <p>Total Cost</p>
+                    <p>N10,500</p>
+                 </div>
+
+                 <button class="w-full h-10 text-xl text-white font-medium bg-mainBlue">
+                     CHECKOUT
+                 </button>
+                
+            </div>
+             
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
