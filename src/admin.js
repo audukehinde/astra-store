@@ -9,7 +9,6 @@ let form = document.getElementById('form');
 let tableBody = document.getElementById("table-body");
 
 window.onload = function() {
-  console.log(localStorage.getItem('products'));
   if(localStorage.getItem('products')) {
     populateTable();
   }
@@ -19,43 +18,43 @@ window.onload = function() {
   }
 };
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+let products = [];
+
+let getProduct = () => { 
   let getLocalEl = (localStorage.getItem('products'));
-  let pasing = JSON.parse(getLocalEl)
- 
+  products = JSON.parse(getLocalEl);
+  console.log(products);
   let product = {
-    id: pasing.length + 1,
+    id: products.length + 1,
     name: productName.value,
     quantity: quantity.value,
     price: price.value,
     desc: desc.value,
   }
 
-  pasing.push(product);
-
-localStorage.setItem('products', JSON.stringify(pasing));
+  products.push(product);
+  localStorage.setItem('products', JSON.stringify(products));
   populateTable();
+  // console.log(products)
+}
+
+form.addEventListener('submit', (e) => {
+  getProduct();
+  e.preventDefault();
+  
 });
 
 
 const populateTable = () => {
 
   let getLocalEl = (localStorage.getItem('products'));
-  let pasing = JSON.parse(getLocalEl)
-  
-  console.log(typeof getLocalEl);
-  console.log(typeof pasing);
-  console.log(pasing[0]);
+  let products = JSON.parse(getLocalEl)
 
   tableBody.innerHTML = "";
-  pasing.forEach((element) => {
-    console.log(element);
+  products.forEach((element) => {
     const row = document.createElement("tr");
-    row.style.borderBottom = "thick solid #0000FF"
+    row.style.borderBottom = "2px solid #000"
     row.classList.add("my-row");
-
-    console.log(localStorage.getItem('products'));
     
     row.append(tableData(element.id));
     row.append(tableData(element.name));
@@ -92,12 +91,18 @@ const actions = (id) => {
   const deleteButton = document.createElement("button");
   // deleteButton.classList.add("deletebtn");
   deleteButton.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
-  deleteButton.addEventListener("click", () => deleteIntern(id));
+  deleteButton.addEventListener("click", () => removeProduct(id));
 
   container.appendChild(editButton);
   container.appendChild(deleteButton);
   return container;
 };
+
+const removeProduct = (id) => {
+  let products = JSON.parse(localStorage.getItem('products'));
+  products = products.filter((product) => product.id != id);
+  populateTable();
+}
 
 mainAdd.addEventListener("click", () => {
   formContainer.style.display = "block";
