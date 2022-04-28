@@ -6,6 +6,7 @@ let quantity = document.getElementById("quantity");
 let price = document.getElementById("price");
 let desc = document.getElementById("desc"); 
 let form = document.getElementById('form');
+let imgUrl = document.getElementById('img-url');
 let tableBody = document.getElementById("table-body");
 
 window.onload = function() {
@@ -26,6 +27,7 @@ let getProduct = () => {
   console.log(products);
   let product = {
     id: products.length + 1,
+    url: imgUrl.value,
     name: productName.value,
     quantity: quantity.value,
     price: price.value,
@@ -57,6 +59,7 @@ const populateTable = () => {
     row.classList.add("my-row");
     
     row.append(tableData(element.id));
+    row.append(tableData(element.url));
     row.append(tableData(element.name));
     row.append(tableData(element.quantity));
     row.append(tableData(element.price));
