@@ -24,7 +24,7 @@ let products = [];
 let getProduct = () => { 
   let getLocalEl = (localStorage.getItem('products'));
   products = JSON.parse(getLocalEl);
-  console.log(products);
+  // console.log(products);
   let product = {
     id: products.length + 1,
     url: imgUrl.value,
@@ -56,7 +56,7 @@ const populateTable = () => {
   products.forEach((element) => {
     const row = document.createElement("tr");
     row.style.borderBottom = "2px solid #000"
-    row.classList.add("my-row");
+    // row.classList.add("my-row");
     
     row.append(tableData(element.id));
     row.append(tableData(element.url));
