@@ -1,6 +1,7 @@
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
+<<<<<<< HEAD
     screens: {
       sm: '480px',
       md: '768px',
@@ -31,6 +32,7 @@ module.exports = {
       silver: '#ecebff',
       'bubble-gum': '#ff77e9',
       bermuda: '#78dcca',
+
     },
     extend: {},
   },
