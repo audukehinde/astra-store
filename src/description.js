@@ -11,14 +11,15 @@ const mainPrice = 8250
 
 
 
-let count = 0;
+ count = parseInt(itemNumber.innerHTML);
 decrease.addEventListener("click", function() {
     count--;
     itemNumber.innerHTML = count;
-    const newPrice = mainPrice / count
+    const newPrice = mainPrice * count
 
-    price.innerHTML = newPrice;
     console.log(`the price is ${price}`);
+    console.log(`the price is ${newPrice}`);
+    price.innerHTML = newPrice;
 
 })
 
@@ -32,4 +33,25 @@ increase.addEventListener('click', ()=> {
     console.log(`the price is ${newPrice}`);
     price.innerHTML = newPrice;
 })
+function addtocart() {
+alert("please add to cart")
+let items = []
+let item = {
+    id : 1,
+    name: "new item",
+    imageUrl: "",
+    description: "new item description",
+    unitPrice: 800,
+    quantity: 2,
+    totalPrice: 16000
+}
+
+
+gg.push(item)
+
+let stringedItems = JSON.stringify(items)
+
+localStorage.setItem("cart", stringedItems);
+}
+
 
