@@ -27,7 +27,7 @@
         </div>
         <div class=" flex flex-col justify-between p-10"  >
             <h1 class="font-bold text-4xl">DANG AGELESS Q10+ VIT C <br> OIL SERUM 30ML</h1>
-            <p class="text-gray-600 font-semibold text-4xl mt-2 mb-2">NGN8,250.00</p>
+            <p id="price" class="text-gray-600 font-semibold text-4xl mt-2 mb-2"> NGN <span id="price-number">8250</span></p>
             <p class="text-gray-600 font-medium text-1xl">
                 DANG! Ageless Q10 + Vit. C serum is a <br> rich, fragrance-free oil serum. <br> 
                 Formulated to work in and out of the <br> skin with Q10 on the upper layer and <br> big shot Vitamin C, Ascorbyl <br> Tetrasopalmitate (Tetrahexyldecyl <br> ascorbate) in the innermost layer, this <br> powerful combo makes sure to <br> prevent discoloration, aging, <br> hyperpigmentation, and sun damage. 
@@ -35,11 +35,12 @@
             <div class="gap-2 flex mt-6">
                 
                 <div class="flex bg-lightwhiteblue  item-center">
-                    <button class=" p-4">-</button>
-                    <span class=" p-4">1</span>
-                    <button class= "p-4">+</button>
+                    <button id="decrease" class=" p-4">-</button>
+                    <span id="item-number" class=" p-4">1</span>
+                    <button id="increase" class= "p-4">+</button>
                 </div>
                 <button class="bg-darkblackblue p-4 text-white font-bold">ADD TO CART</button>
+                <h1 class="totalprice"></h1>
             </div>
         </div>
 
@@ -50,6 +51,6 @@
        
  
 </div>
-
+<script src="description.js"></script>
 </body>
 </html>
