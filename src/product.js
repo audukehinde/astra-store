@@ -157,6 +157,8 @@ const showProduct = () => {
     const list = document.querySelector('.product-list')
     const card = document.createElement('div')
 
+    card.setAttribute('onclick', `showProductModal('${product.id}')`)
+
     card.innerHTML = ` <div
     class="card h-60 p-3 flex flex-col justify-between font-roboto shadow-md md:h-72"
     style="background-color: #fff"
@@ -179,7 +181,10 @@ const showProduct = () => {
     </div>
   </div>`
 
+    // console.log(product)
+
     list.appendChild(card)
+
     // console.log(product)
   })
 }
@@ -206,3 +211,11 @@ const AddToCart = (ItemId, qty) => {
 
 AddToCart(4, 8)
 console.log(carts)
+
+const showProductModal = (id) => {
+  id = parseInt(id)
+
+  products.find((product) => {
+    product.id === id && console.log(product)
+  })
+}
