@@ -212,6 +212,7 @@ const AddToCart = (ItemId, qty) => {
 AddToCart(4, 8)
 console.log(carts)
 
+// display modal
 const showProductModal = (id) => {
   id = parseInt(id)
 
