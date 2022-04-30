@@ -214,6 +214,9 @@ console.log(carts)
 
 // display modal
 const showProductModal = (id) => {
+  // window.history.pushState('', '', 'http://127.0.0.1:5500/src/cart-page.html')
+  // window.reload()
+  console.log('clicked')
   id = parseInt(id)
 
   products.find((product) => {
