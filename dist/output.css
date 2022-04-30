@@ -653,6 +653,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 24rem;
 }
 
+.h-2\/3 {
+  height: 66.666667%;
+}
+
+.h-2\/4 {
+  height: 50%;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -735,6 +743,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -782,6 +794,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-auto {
   overflow: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .rounded-lg {
@@ -1211,6 +1227,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 976px) {
+  .lg\:h-4\/5 {
+    height: 80%;
+  }
+
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
