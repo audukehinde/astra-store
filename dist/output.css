@@ -705,6 +705,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 0.75rem;
 }
 
+.w-\[60\%\] {
+  width: 60%;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -794,6 +798,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-auto {
   overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .overflow-y-scroll {
