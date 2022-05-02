@@ -39,6 +39,12 @@ let getProduct = () => {
   localStorage.setItem("products", JSON.stringify(products));
   populateTable();
   // console.log(products)
+
+  productName.value = '';
+  quantity.value = '';
+  price.value = '';
+  desc.value = '';
+  imgUrl.value = '';
 };
 
 addProductBtn.addEventListener("click", (e) => {
@@ -103,7 +109,6 @@ const removeProduct = (id) => {
   let products = JSON.parse(localStorage.getItem("products"));
   products = products.filter((product) => product.id != id);
   localStorage.setItem("products", JSON.stringify(products));
-  console.log(products.length);
   populateTable();
 };
 
