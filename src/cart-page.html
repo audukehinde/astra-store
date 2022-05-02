@@ -70,7 +70,9 @@
                     <p id="cart-total">N10,500</p>
                  </div>
 
-                 <button class="w-full h-10 text-xl text-white font-medium bg-mainBlue">
+                 <!-- <button type="button" onclick="makePayment()">Pay Now</button> -->
+
+                 <button class="w-full h-10 text-xl text-white font-medium bg-mainBlue cursor-pointer" id="paynow" onclick="makePayment()">
                      CHECKOUT
                  </button>
                 
@@ -82,4 +84,6 @@
   </body>
 
   <script src="/src/cart-page.js"></script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+
 </html>

@@ -12,8 +12,8 @@ let carts = [
   {
     id: 1,
     name: "chocolate candy bar",
-    price: 1,
-    quantity: 1,
+    price: 300,
+    quantity: 90,
     reviews: 4.5,
     img: "./img/product1.png",
     description: "A chocolate bar that taste yummy",
@@ -22,8 +22,8 @@ let carts = [
   {
     id: 2,
     name: "choco candy bar",
-    price: 1,
-    quantity: 1,
+    price: 800,
+    quantity: 70,
     reviews: 4.5,
     img: "./img/product2.png",
     description: "A chocolate bar that taste yummy",
@@ -31,8 +31,8 @@ let carts = [
   {
     id: 3,
     name: "chocolateeeey candy bar",
-    price: 1,
-    quantity: 1,
+    price: 1200,
+    quantity: 80,
     reviews: 4.5,
     img: "./img/product3.png",
     description: "A chocolate bar that taste yummy",
@@ -40,8 +40,8 @@ let carts = [
   {
     id: 4,
     name: "chocolate candy bar",
-    price: 1,
-    quantity: 1,
+    price: 400,
+    quantity: 200,
     reviews: 4.5,
     img: "./img/product4.png",
     description: "A chocolate bar that taste yummy",
@@ -49,8 +49,8 @@ let carts = [
   {
     id: 5,
     name: "chocolate candy bar",
-    price: 1,
-    quantity: 1,
+    price: 80,
+    quantity: 400,
     reviews: 4.5,
     img: "./img/product5.png",
     description: "A chocolate bar that taste yummy",
@@ -59,8 +59,8 @@ let carts = [
   {
     id: 6,
     name: "chocolate candy bar",
-    price: 1,
-    quantity: 1,
+    price: 300,
+    quantity: 10,
     reviews: 4.5,
     img: "./img/product6.png",
     description: "A chocolate bar that taste yummy",
@@ -68,8 +68,8 @@ let carts = [
   {
     id: 7,
     name: "chocolate candy bar",
-    price: 1,
-    quantity: 1,
+    price: 130,
+    quantity: 40,
     reviews: 4.5,
     img: "./img/product7.png",
     description: "A chocolate bar that taste yummy",
@@ -77,8 +77,8 @@ let carts = [
   {
     id: 8,
     name: "My candy bar",
-    price: 1,
-    quantity: 1,
+    price: 100,
+    quantity: 18,
     reviews: 4.5,
     img: "./img/product8.png",
     description: "A chocolate bar that taste yummy",
@@ -87,8 +87,8 @@ let carts = [
   {
     id: 8,
     name: "Mr Sumbo",
-    price: 1,
-    quantity: 1,
+    price: 100,
+    quantity: 12,
     reviews: 4.5,
     img: "./img/product8.png",
     description: "A chocolate bar that taste yummy",
@@ -96,8 +96,8 @@ let carts = [
   {
     id: 8,
     name: "Mr Sumbo",
-    price: 10,
-    quantity: 10,
+    price: 190,
+    quantity: 170,
     reviews: 4.5,
     img: "./img/product8.png",
     description: "A chocolate bar that taste yummy",
@@ -105,7 +105,7 @@ let carts = [
   {
     id: 8,
     name: "Mr Sumbo",
-    price: 10,
+    price: 100,
     quantity: 10,
     reviews: 4.5,
     img: "./img/product8.png",
@@ -157,16 +157,42 @@ const displayCart = () => {
   });
 };
 
-const displayTotal = () => {
+function displayTotal() {
   let myCart = JSON.parse(localStorage.getItem("carts"));
-  console.log(typeof myCart)
   let cartTotal = document.getElementById('cart-total');
   let count = 0;
   myCart.forEach((element) => {
     count += element.price * element.quantity
-    cartTotal.innerHTML = count;
   });
-  
+  return cartTotal.innerHTML = count;
+}
+
+let myamount = displayTotal();
+console.log(myamount);
+
+function makePayment() {
+  FlutterwaveCheckout({
+    public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+    tx_ref: "titanic-48981487343MDI0NzMx",
+    amount: myamount,
+    currency: "NGN",
+    payment_options: "card, banktransfer, ussd",
+    redirect_url: "https://glaciers.titanic.com/handle-flutterwave-payment",
+    meta: {
+      consumer_id: 23,
+      consumer_mac: "92a3-912ba-1192a",
+    },
+    customer: {
+      email: "rose@unsinkableship.com",
+      phone_number: "08102909304",
+      name: "Rose DeWitt Bukater",
+    },
+    customizations: {
+      title: "The Titanic Store",
+      description: "Payment for an awesome cruise",
+      logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
+    },
+  });
 }
 
 document.querySelector("DOMContentLoaded", displayCart(), displayTotal());
