@@ -14,76 +14,93 @@
       <div class="shopping-card py-10 w-full md:w-3/4 px-6 divide-y-2">
         <div class="shopping-title flex justify-between">
           <h2 class="text-2xl font-semibold">Shopping Cart</h2>
-          <p>3 Items</p>
+          <p id="item-count">3 Items</p>
         </div>
         <div class="cart-list text-sm md:text-base w-full">
-          <div class="cart-list--head flex justify-between text-base text-gray-600 font-bold my-5">
-            <p >PRODUCT DETAILS</p>
-            <p >QUANTITY</p>
-            <p >PRICE</p>
-            <p >TOTAL</p>
+          <div
+            class="cart-list--head flex justify-between text-base text-gray-600 font-bold my-5"
+          >
+            <p>PRODUCT DETAILS</p>
+            <p>QUANTITY</p>
+            <p>PRICE</p>
+            <p>TOTAL</p>
           </div>
-          <div class="cart-list--body max-h-96 overflow-y-scroll lg:h-4/5">
-            
-          </div>
+          <div
+            class="cart-list--body max-h-96 overflow-y-scroll lg:h-4/5"
+          ></div>
         </div>
       </div>
-      <div class="order-summary h-full bg-gray-300 mt-20 w-full md:m-0 md:h-full md:w-1/4 md:bg-mainGray">
-          <div class="divide-y-2 py-10 flex flex-col justify-start h-full w-full px-6 divide-gray-400">
-            <div class="shopping-title">
-                <h2 class="text-xl font-medium">Order Summary</h2>
-                
-              </div>
-            <div>
-                <div class="shipping-title flex justify-between text-base font-semibold text-gray-600 my-5">
-                    <h2>ITEMS 3</h2>
-                    <p>N5000</p>
-                  </div>
-
-                  <div class="shipping-input">
-                    <label for="shipping-field"> SHIPPING</label>
-
-                        <select class="w-full my-4 px-4 h-14 shadow text-gray-500 " style="box-shadow:inset 0 4px 1px rgb(0, 0, 0, 0.2);" name="shipping" id="shipping-field">
-                        <option value="standard">Standard shipping - N500</option>
-                        <option value="medium">Classic Shipping N1500</option>
-                        <option value="King">King Shipping - N5000</option>
-                        
-                        </select>
-
-                  </div>
-
-                  <div class="promo-input divide-y-2">
-                    <label for="shipping-field"> PROMO</label>
-
-                        <input class="w-full my-4 h-14 shadow px-4" placeholder="Enter your code"  style="box-shadow:inset 0 4px 1px rgb(0, 0, 0, 0.2);" name="shipping" id="shipping-field">
-                        <button class="bg-buttonPink my-6 h-14 text-white font-medium p-4">APPLY</button>
-
-                  </div>
-
-
-            </div>
-
-            <div class="">
-                 <div class="flex justify-between my-4">
-
-                    <p>Total Cost</p>
-                    <p id="cart-total">N10,500</p>
-                 </div>
-
-                 <!-- <button type="button" onclick="makePayment()">Pay Now</button> -->
-
-                 <button class="w-full h-10 text-xl text-white font-medium bg-mainBlue cursor-pointer" id="paynow" onclick="makePayment()">
-                     CHECKOUT
-                 </button>
-                
-            </div>
-             
+      <div
+        class="order-summary h-full bg-gray-300 mt-20 w-full md:m-0 md:h-full md:w-1/4 md:bg-mainGray"
+      >
+        <div
+          class="divide-y-2 py-10 flex flex-col justify-start h-full w-full px-6 divide-gray-400"
+        >
+          <div class="shopping-title">
+            <h2 class="text-xl font-medium">Order Summary</h2>
           </div>
+          <div>
+            <div
+              class="shipping-title flex justify-between text-base font-semibold text-gray-600 my-5"
+            >
+              <h2>ITEMS 3</h2>
+              <p>N5000</p>
+            </div>
+
+            <div class="shipping-input">
+              <label for="shipping-field"> SHIPPING</label>
+
+              <select
+                class="w-full my-4 px-4 h-14 shadow text-gray-500"
+                style="box-shadow: inset 0 4px 1px rgb(0, 0, 0, 0.2)"
+                name="shipping"
+                id="shipping-field"
+              >
+                <option value="standard">Standard shipping - N500</option>
+                <option value="medium">Classic Shipping N1500</option>
+                <option value="King">King Shipping - N5000</option>
+              </select>
+            </div>
+
+            <div class="promo-input divide-y-2">
+              <label for="shipping-field"> PROMO</label>
+
+              <input
+                class="w-full my-4 h-14 shadow px-4"
+                placeholder="Enter your code"
+                style="box-shadow: inset 0 4px 1px rgb(0, 0, 0, 0.2)"
+                name="shipping"
+                id="shipping-field"
+              />
+              <button
+                class="bg-buttonPink my-6 h-14 text-white font-medium p-4"
+              >
+                APPLY
+              </button>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="flex justify-between my-4">
+              <p>Total Cost</p>
+              <p id="cart-total">N10,500</p>
+            </div>
+
+            <!-- <button type="button" onclick="makePayment()">Pay Now</button> -->
+
+            <button
+              class="w-full h-10 text-xl text-white font-medium bg-mainBlue cursor-pointer"
+              id="paynow"
+              onclick="makePayment()"
+            >
+              CHECKOUT
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
 
   <script src="/src/cart-page.js"></script>
   <script src="https://checkout.flutterwave.com/v3.js"></script>
-
 </html>

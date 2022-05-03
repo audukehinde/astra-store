@@ -7,116 +7,116 @@ window.onload = function () {
   }
 }
 
-let carts = [
-  {
-    id: 1,
-    name: 'chocolate candy bar',
-    price: 300,
-    quantity: 90,
-    reviews: 4.5,
-    img: './img/product1.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 2,
-    name: 'choco candy bar',
-    price: 800,
-    quantity: 70,
-    reviews: 4.5,
-    img: './img/product2.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 3,
-    name: 'chocolateeeey candy bar',
-    price: 1200,
-    quantity: 80,
-    reviews: 4.5,
-    img: './img/product3.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 4,
-    name: 'chocolate candy bar',
-    price: 400,
-    quantity: 200,
-    reviews: 4.5,
-    img: './img/product4.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 5,
-    name: 'chocolate candy bar',
-    price: 80,
-    quantity: 400,
-    reviews: 4.5,
-    img: './img/product5.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-
-  {
-    id: 6,
-    name: 'chocolate candy bar',
-    price: 300,
-    quantity: 10,
-    reviews: 4.5,
-    img: './img/product6.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 7,
-    name: 'chocolate candy bar',
-    price: 130,
-    quantity: 40,
-    reviews: 4.5,
-    img: './img/product7.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 8,
-    name: 'My candy bar',
-    price: 100,
-    quantity: 18,
-    reviews: 4.5,
-    img: './img/product8.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-
-  {
-    id: 8,
-    name: 'Mr Sumbo',
-    price: 100,
-    quantity: 12,
-    reviews: 4.5,
-    img: './img/product8.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 8,
-    name: 'Mr Sumbo',
-    price: 190,
-    quantity: 170,
-    reviews: 4.5,
-    img: './img/product8.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 8,
-    name: 'Mr Sumbo',
-    price: 100,
-    quantity: 10,
-    reviews: 4.5,
-    img: './img/product8.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-]
+// let carts = [
+//   //   {
+//   //     id: 1,
+//   //     name: 'chocolate candy bar',
+//   //     price: 300,
+//   //     quantity: 90,
+//   //     reviews: 4.5,
+//   //     img: './img/product1.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 2,
+//   //     name: 'choco candy bar',
+//   //     price: 800,
+//   //     quantity: 70,
+//   //     reviews: 4.5,
+//   //     img: './img/product2.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 3,
+//   //     name: 'chocolateeeey candy bar',
+//   //     price: 1200,
+//   //     quantity: 80,
+//   //     reviews: 4.5,
+//   //     img: './img/product3.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 4,
+//   //     name: 'chocolate candy bar',
+//   //     price: 400,
+//   //     quantity: 200,
+//   //     reviews: 4.5,
+//   //     img: './img/product4.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 5,
+//   //     name: 'chocolate candy bar',
+//   //     price: 80,
+//   //     quantity: 400,
+//   //     reviews: 4.5,
+//   //     img: './img/product5.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 6,
+//   //     name: 'chocolate candy bar',
+//   //     price: 300,
+//   //     quantity: 10,
+//   //     reviews: 4.5,
+//   //     img: './img/product6.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 7,
+//   //     name: 'chocolate candy bar',
+//   //     price: 130,
+//   //     quantity: 40,
+//   //     reviews: 4.5,
+//   //     img: './img/product7.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 8,
+//   //     name: 'My candy bar',
+//   //     price: 100,
+//   //     quantity: 18,
+//   //     reviews: 4.5,
+//   //     img: './img/product8.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 8,
+//   //     name: 'Mr Sumbo',
+//   //     price: 100,
+//   //     quantity: 12,
+//   //     reviews: 4.5,
+//   //     img: './img/product8.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 8,
+//   //     name: 'Mr Sumbo',
+//   //     price: 190,
+//   //     quantity: 170,
+//   //     reviews: 4.5,
+//   //     img: './img/product8.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+//   //   {
+//   //     id: 8,
+//   //     name: 'Mr Sumbo',
+//   //     price: 100,
+//   //     quantity: 10,
+//   //     reviews: 4.5,
+//   //     img: './img/product8.png',
+//   //     description: 'A chocolate bar that taste yummy',
+//   //   },
+// ]
 
 // console.log(carts[0].price);
 
-localStorage.setItem('carts', JSON.stringify(carts))
+// localStorage.setItem('carts', JSON.stringify(carts))
 
 const displayCart = () => {
   let myCart = JSON.parse(localStorage.getItem('carts'))
+  console.log(myCart)
+  document.getElementById('item-count').innerText = `${myCart.length} items`
   myCart.map((cartItem) => {
     const cartList = document.querySelector('.cart-list--body')
     const cartItems = document.createElement('div')
@@ -195,25 +195,7 @@ function makePayment() {
 
 document.querySelector('DOMContentLoaded', displayCart(), displayTotal())
 
-//Add to cart function
-
-const AddToCart = (ItemId, qty) => {
-  products.find((product) => {
-    if (product.id === ItemId) {
-      // console.log(' item added to cart')
-      carts.push({
-        id: product.id,
-        quantity: qty,
-        title: product.title,
-        price: product.price,
-      })
-    }
-    return
-  })
-}
-
-AddToCart(4, 8)
-console.log(carts)
+//
 
 // display modal
 const showProductModal = (id) => {
@@ -291,29 +273,3 @@ const showProductModal = (id) => {
     description.appendChild(details)
   })
 }
-// const AddToCart = (ItemId, qty) => {
-//   products.find((product) => {
-//     if (product.id === ItemId) {
-//       // console.log(' item added to cart')
-//       carts.push({
-//         id: product.id,
-//         quantity: qty,
-//         title: product.title,
-//         price: product.price,
-//       })
-//     }
-//     return
-//   })
-// }
-
-// AddToCart(4, 8)
-// console.log(carts)
-
-// // display modal
-// const showProductModal = (id) => {
-//   id = parseInt(id)
-
-//   products.find((product) => {
-//     product.id === id && console.log(product)
-//   })
-// }

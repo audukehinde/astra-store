@@ -324,22 +324,7 @@ const showProductModal = (id) => {
 
     if (product.id === id) {
       details.innerHTML = `
-    <div class="bp-20">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6 absolute right-0 -mt-8 cursor-pointer"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-    </div>
+   
     <div class="product-desc mx-auto flex flex-col h-full w-full">
       <div class="h-4/5 flex justify-center">
         <div class="h-full w-5/12 py-10 pl-10">
@@ -433,55 +418,7 @@ const showProductModal = (id) => {
   getTotalPrice(id)
 }
 
-// const itemNumber = document.getElementById('item-number')
-// const decrease = document.getElementById('decrease')
-// const increase = document.getElementById('increase')
-
-// const price = document.getElementById('price-number')
-
-// // const mainPrice = 8250
-
-// count = parseInt(itemNumber.innerHTML)
-// decrease.addEventListener('click', function () {
-//   count--
-//   itemNumber.innerHTML = count
-//   const newPrice = mainPrice * count
-
-//   console.log(`the price is ${price}`)
-//   console.log(`the price is ${newPrice}`)
-//   price.innerHTML = newPrice
-// })
-
-// increase.addEventListener('click', () => {
-//   count++
-//   itemNumber.innerHTML = count
-//   const newPrice = mainPrice * count
-
-//   console.log(`the price is ${price}`)
-//   console.log(`the price is ${newPrice}`)
-//   price.innerHTML = newPrice
-// })
-function addtocart() {
-  alert('product added to cart')
-  let items = []
-  let item = {
-    id: 1,
-    name: 'new item',
-    imageUrl: '',
-    description: 'new item description',
-    unitPrice: 800,
-    quantity: 2,
-    totalPrice: 16000,
-  }
-
-  gg.push(item)
-
-  let stringedItems = JSON.stringify(items)
-
-  localStorage.setItem('cart', stringedItems)
-}
-
-// document.querySelector('DOMContentLoaded', showProduct())
+// close modal
 
 document.querySelector('#modal-close').addEventListener('click', () => {
   const modal = document.querySelector('.desc-modal')
@@ -496,7 +433,20 @@ document.querySelector('#modal-close').addEventListener('click', () => {
   modal.style.display = 'none'
 })
 
-// get quantity and price
+document.querySelector('#close-icon').addEventListener('click', () => {
+  const modal = document.querySelector('.desc-modal')
+  // if (document.querySelector('.product-desc').innerHTML !== '') {
+  // }
+  // document.querySelector('#product').innerHTML = ''
+
+  document.querySelector('.product-desc').innerHTML = ''
+  // document.querySelector('.modal-content').innerHTML = ''
+  // document.querySelector('#modal-close').style.display = 'none'
+
+  modal.style.display = 'none'
+})
+
+// get quantity and price and add to cart
 
 const getTotalPrice = (id) => {
   // set item to cart
