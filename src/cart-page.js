@@ -1,129 +1,18 @@
-let isLogin = false
-
-let users = [
-  {
-    id: 1,
-    name: 'admin',
-    password: 'admin',
-    isAdmin: true,
-  },
-
-  {
-    id: 2,
-    name: 'user1',
-    password: 'user123',
-    isAdmin: false,
-  },
-
-  {
-    id: 3,
-    name: 'kenny',
-    password: 'kenny123',
-    isAdmin: false,
-  },
-]
-
-let products = [
-  {
-    id: 1,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product1.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 2,
-    name: 'choco candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product2.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 3,
-    name: 'chocolateeeey candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product3.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 4,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product4.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 5,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product5.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-
-  {
-    id: 6,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product6.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 7,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product7.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 8,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product8.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-
-  {
-    id: 9,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product2.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-  {
-    id: 10,
-    name: 'chocolate candy bar',
-    price: '$250',
-    quantity: 23,
-    reviews: 4.5,
-    img: './img/product2.png',
-    description: 'A chocolate bar that taste yummy',
-  },
-]
+window.onload = function () {
+  if (localStorage.getItem('carts')) {
+    displayCart()
+  } else {
+    let productsInit = []
+    localStorage.setItem('carts', JSON.stringify(productsInit))
+  }
+}
 
 let carts = [
   {
     id: 1,
     name: 'chocolate candy bar',
-    price: 1250,
-    quantity: 23,
+    price: 300,
+    quantity: 90,
     reviews: 4.5,
     img: './img/product1.png',
     description: 'A chocolate bar that taste yummy',
@@ -131,8 +20,8 @@ let carts = [
   {
     id: 2,
     name: 'choco candy bar',
-    price: 4250,
-    quantity: 23,
+    price: 800,
+    quantity: 70,
     reviews: 4.5,
     img: './img/product2.png',
     description: 'A chocolate bar that taste yummy',
@@ -140,8 +29,8 @@ let carts = [
   {
     id: 3,
     name: 'chocolateeeey candy bar',
-    price: 1250,
-    quantity: 23,
+    price: 1200,
+    quantity: 80,
     reviews: 4.5,
     img: './img/product3.png',
     description: 'A chocolate bar that taste yummy',
@@ -149,8 +38,8 @@ let carts = [
   {
     id: 4,
     name: 'chocolate candy bar',
-    price: 2250,
-    quantity: 23,
+    price: 400,
+    quantity: 200,
     reviews: 4.5,
     img: './img/product4.png',
     description: 'A chocolate bar that taste yummy',
@@ -158,8 +47,8 @@ let carts = [
   {
     id: 5,
     name: 'chocolate candy bar',
-    price: 2350,
-    quantity: 23,
+    price: 80,
+    quantity: 400,
     reviews: 4.5,
     img: './img/product5.png',
     description: 'A chocolate bar that taste yummy',
@@ -168,8 +57,8 @@ let carts = [
   {
     id: 6,
     name: 'chocolate candy bar',
-    price: 2750,
-    quantity: 23,
+    price: 300,
+    quantity: 10,
     reviews: 4.5,
     img: './img/product6.png',
     description: 'A chocolate bar that taste yummy',
@@ -177,57 +66,58 @@ let carts = [
   {
     id: 7,
     name: 'chocolate candy bar',
-    price: 4250,
-    quantity: 23,
+    price: 130,
+    quantity: 40,
     reviews: 4.5,
     img: './img/product7.png',
     description: 'A chocolate bar that taste yummy',
   },
   {
     id: 8,
-    name: 'chocolate candy bar',
-    price: 2500,
-    quantity: 23,
+    name: 'My candy bar',
+    price: 100,
+    quantity: 18,
+    reviews: 4.5,
+    img: './img/product8.png',
+    description: 'A chocolate bar that taste yummy',
+  },
+
+  {
+    id: 8,
+    name: 'Mr Sumbo',
+    price: 100,
+    quantity: 12,
+    reviews: 4.5,
+    img: './img/product8.png',
+    description: 'A chocolate bar that taste yummy',
+  },
+  {
+    id: 8,
+    name: 'Mr Sumbo',
+    price: 190,
+    quantity: 170,
+    reviews: 4.5,
+    img: './img/product8.png',
+    description: 'A chocolate bar that taste yummy',
+  },
+  {
+    id: 8,
+    name: 'Mr Sumbo',
+    price: 100,
+    quantity: 10,
     reviews: 4.5,
     img: './img/product8.png',
     description: 'A chocolate bar that taste yummy',
   },
 ]
 
-const login = (username, password) => {
-  try {
-    users.forEach((user) => {
-      // if (user.name === username && user.password === password) {
-      if (
-        user.isAdmin &&
-        username === user.name &&
-        password === user.password
-      ) {
-        isLogin = true
-        console.log(`${user.name} is an admin`)
-        window.location = './admin.html'
-      } else if (user.name === username && user.password === password) {
-        isLogin = true
-        console.log(`${user.name} is a user, log in successful`)
-        window.location = './product.html'
-      }
-      //else {
-      //   console.log('login error')
-      // }
-    })
-  } catch (error) {
-    console.log(error)
-  }
-}
+// console.log(carts[0].price);
 
-// login('kenny', 'kenny123')
-// login('admin', 'admin')
-login('user1', 'user12')
-
-console.log(isLogin)
+localStorage.setItem('carts', JSON.stringify(carts))
 
 const displayCart = () => {
-  carts.map((cartItem) => {
+  let myCart = JSON.parse(localStorage.getItem('carts'))
+  myCart.map((cartItem) => {
     const cartList = document.querySelector('.cart-list--body')
     const cartItems = document.createElement('div')
 
@@ -245,12 +135,9 @@ const displayCart = () => {
 
     <div class="product-quantity">
   
-
       <div class="w-10 border text-center border-gray-400" type="number" value="1" min="1">${
         cartItem.quantity
       }</div>
-
-      
     </div>
 
     <div class="product-price">
@@ -268,50 +155,48 @@ const displayCart = () => {
   })
 }
 
-document.querySelector('DOMContentLoaded', displayCart())
+function displayTotal() {
+  let myCart = JSON.parse(localStorage.getItem('carts'))
+  let cartTotal = document.getElementById('cart-total')
+  let count = 0
+  myCart.forEach((element) => {
+    count += element.price * element.quantity
+  })
+  return (cartTotal.innerHTML = count)
+}
 
-const showProduct = () => {
-  products.map((product) => {
-    const list = document.querySelector('.product-list')
-    const card = document.createElement('div')
+let myamount = displayTotal()
+console.log(myamount)
 
-    card.setAttribute('onclick', `showProductModal('${product.id}')`)
-
-    card.innerHTML = ` <div
-    class="card h-60 p-3 flex flex-col justify-between font-roboto shadow-md md:h-72"
-    style="background-color: #fff"
-  >
-    <div class="product-image bg-cover w-full">
-      <img src="${product.img}" alt="${product.name}" />
-    </div>
-
-    <div
-      class="product-content flex justify-between border-t-2 border-gray-300 sm:text-sm"
-    >
-      <div class="product flex flex-col">
-        <h3>${product.name}</h3>
-        <p>30% discount</p>
-      </div>
-
-      <div class="product text-secondaryPink">
-        <p>${product.price}</p>
-      </div>
-    </div>
-  </div>`
-
-    // console.log(product)
-
-    list.appendChild(card)
-
-    // console.log(product)
+function makePayment() {
+  FlutterwaveCheckout({
+    public_key: 'FLWPUBK_TEST-SANDBOXDEMOKEY-X',
+    tx_ref: 'titanic-48981487343MDI0NzMx',
+    amount: myamount,
+    currency: 'NGN',
+    payment_options: 'card, banktransfer, ussd',
+    redirect_url: 'https://glaciers.titanic.com/handle-flutterwave-payment',
+    meta: {
+      consumer_id: 23,
+      consumer_mac: '92a3-912ba-1192a',
+    },
+    customer: {
+      email: 'rose@unsinkableship.com',
+      phone_number: '08102909304',
+      name: 'Rose DeWitt Bukater',
+    },
+    customizations: {
+      title: 'The Titanic Store',
+      description: 'Payment for an awesome cruise',
+      logo: 'https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg',
+    },
   })
 }
 
-document.querySelector('DOMContentLoaded', showProduct())
-
-// !isLogin ? console.log('invalid log in details') : showProduct()
+document.querySelector('DOMContentLoaded', displayCart(), displayTotal())
 
 //Add to cart function
+
 const AddToCart = (ItemId, qty) => {
   products.find((product) => {
     if (product.id === ItemId) {
@@ -406,3 +291,29 @@ const showProductModal = (id) => {
     description.appendChild(details)
   })
 }
+// const AddToCart = (ItemId, qty) => {
+//   products.find((product) => {
+//     if (product.id === ItemId) {
+//       // console.log(' item added to cart')
+//       carts.push({
+//         id: product.id,
+//         quantity: qty,
+//         title: product.title,
+//         price: product.price,
+//       })
+//     }
+//     return
+//   })
+// }
+
+// AddToCart(4, 8)
+// console.log(carts)
+
+// // display modal
+// const showProductModal = (id) => {
+//   id = parseInt(id)
+
+//   products.find((product) => {
+//     product.id === id && console.log(product)
+//   })
+// }
