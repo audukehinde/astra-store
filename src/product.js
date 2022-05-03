@@ -557,6 +557,16 @@ const getTotalPrice = (id) => {
 
   document.querySelector('#addToCart').addEventListener('click', () => {
     const quantity = parseInt(itemNumber.innerText)
+
+    // let storageCarts = JSON.parse(localStorage.carts)
+
+    // console.log(storageCarts)
+
+    // storageCarts.find((item) => {
+    //   if (item.id === id) {
+    //     console.log(item.id)
+    //   }
+    // })
     products.find((product) => {
       if (product.id === id) {
         cartItem = {
@@ -564,14 +574,20 @@ const getTotalPrice = (id) => {
           total: quantity * product.price,
           quantity: quantity,
         }
+        // carts = storageCarts
         console.log(cartItem)
+
+        const storageCarts = JSON.parse(localStorage.carts)
+        carts = storageCarts
         carts.push(cartItem)
-        JSON.parse(localStorage.carts).find((cart) => {
-          if (cart.id === id) {
-            // ;({ ...JSON.parse(localStorage.carts)[id], quantity: quantity })
-          }
-        })
-        console.log(JSON.parse(localStorage.carts)[id])
+
+        // JSON.parse(localStorage.carts).find((cart) => {
+        //   if (cart.id === id) {
+        //     // ;({ ...JSON.parse(localStorage.carts)[id], quantity: quantity })
+        //   }
+        // })
+        // console.log(JSON.parse(localStorage.carts).carts[id])
+
         localStorage.setItem('carts', JSON.stringify(carts))
         // console.log(product)
       }
