@@ -39,6 +39,12 @@ let getProduct = () => {
   localStorage.setItem("products", JSON.stringify(products));
   populateTable();
   // console.log(products)
+
+  productName.value = '';
+  quantity.value = '';
+  price.value = '';
+  desc.value = '';
+  imgUrl.value = '';
 };
 
 addProductBtn.addEventListener("click", (e) => {
@@ -60,7 +66,7 @@ const populateTable = () => {
     row.append(tableData(element.url));
     row.append(tableData(element.name));
     row.append(tableData(element.quantity));
-    row.append(tableData(element.price));
+    row.append(tableData('#' + element.price));
     row.append(tableData(element.desc));
     row.append(actions(element.id));
 
@@ -103,7 +109,6 @@ const removeProduct = (id) => {
   let products = JSON.parse(localStorage.getItem("products"));
   products = products.filter((product) => product.id != id);
   localStorage.setItem("products", JSON.stringify(products));
-  console.log(products.length);
   populateTable();
 };
 
