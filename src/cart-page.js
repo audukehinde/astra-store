@@ -336,5 +336,73 @@ const showProductModal = (id) => {
 
   products.find((product) => {
     product.id === id && console.log(product)
+
+    const description = document.querySelector('.desc-modal')
+    const details = document.createElement('div')
+
+    details.innerHTML = ` 
+    <div class="bp-20">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 absolute right-0 -mt-8 cursor-pointer"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    </div>
+    <div class="product-desc mx-auto flex flex-col h-full w-full">
+      <div class="h-4/5 flex justify-center">
+        <div class="h-full w-5/12 py-10 pl-10">
+          <img src="../src/img/Dang-Vit-c.jpg" />
+        </div>
+        <div class="flex flex-col justify-between p-10">
+          <h1 class="font-bold text-4xl">
+            DANG AGELESS Q10+ VIT C <br />
+            OIL SERUM 30ML
+          </h1>
+          <p
+            id="price"
+            class="text-gray-600 font-semibold text-4xl mt-2 mb-2"
+          >
+            NGN <span id="price-number">8250</span>
+          </p>
+          <p class="text-gray-600 font-medium text-1xl">
+            DANG! Ageless Q10 + Vit. C serum is a <br />
+            rich, fragrance-free oil serum. <br />
+            Formulated to work in and out of the <br />
+            skin with Q10 on the upper layer and <br />
+            big shot Vitamin C, Ascorbyl <br />
+            Tetrasopalmitate (Tetrahexyldecyl <br />
+            ascorbate) in the innermost layer, this <br />
+            powerful combo makes sure to <br />
+            prevent discoloration, aging, <br />
+            hyperpigmentation, and sun damage.
+          </p>
+          <div class="gap-2 flex mt-6">
+            <div class="flex bg-lightwhiteblue item-center">
+              <button id="decrease" class="p-4">-</button>
+              <span id="item-number" class="p-4">1</span>
+              <button id="increase" class="p-4">+</button>
+            </div>
+            <button
+              class="bg-darkblackblue p-4 text-white font-bold"
+              onclick="addtocart()"
+            >
+              ADD TO CART
+            </button>
+            <h1 class="totalprice"></h1>
+          </div>
+        </div>
+      </div>
+    </div>`
+
+    description.appendChild(details)
   })
 }
