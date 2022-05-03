@@ -11,23 +11,22 @@ let tableBody = document.getElementById("table-body");
 const updateProductBtn = document.getElementById("btn-update-product");
 const addProductBtn = document.getElementById("btn-submit-product");
 
+
 window.onload = function () {
   if (localStorage.getItem("products")) {
     populateTable();
-  } else {
-    let productsInit = [];
-    localStorage.setItem("products", JSON.stringify(productsInit));
   }
 };
 
-let products = [];
+// let products = [];
 
-let getProduct = () => {
-  let getLocalEl = localStorage.getItem("products");
-  products = JSON.parse(getLocalEl);
-  // console.log(products);
+
+const getProduct = () => {
+
+  let id = Math.random()
+
   let product = {
-    id: products.length + 1,
+    id: id,
     url: imgUrl.value,
     name: productName.value,
     quantity: quantity.value,
@@ -35,8 +34,20 @@ let getProduct = () => {
     desc: desc.value,
   };
 
-  products.push(product);
-  localStorage.setItem("products", JSON.stringify(products));
+
+  let getLocalEl = localStorage.getItem("products");
+ let products = JSON.parse(getLocalEl);
+  let productsInit = []
+
+  if (getLocalEl) {
+    products.push(product)
+    localStorage.setItem("products", JSON.stringify(products));
+  } else {
+    productsInit.push(product)
+    console.log(product)
+    localStorage.setItem("products", JSON.stringify(productsInit));
+  }
+
   populateTable();
   // console.log(products)
 
@@ -48,21 +59,22 @@ let getProduct = () => {
 };
 
 addProductBtn.addEventListener("click", (e) => {
-  getProduct();
   e.preventDefault();
+  getProduct();
 });
 
 const populateTable = () => {
+  tableBody.innerHTML = "";
   let getLocalEl = localStorage.getItem("products");
   let products = JSON.parse(getLocalEl);
 
-  tableBody.innerHTML = "";
-  products.forEach((element) => {
+  
+  products.forEach((element, index) => {
     const row = document.createElement("tr");
     row.style.borderBottom = "2px solid #000";
     // row.classList.add("my-row");
 
-    row.append(tableData(element.id));
+    row.append(tableData(index + 1));
     row.append(tableData(element.url));
     row.append(tableData(element.name));
     row.append(tableData(element.quantity));
