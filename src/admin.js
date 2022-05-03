@@ -18,11 +18,7 @@ window.onload = function () {
   }
 };
 
-// let products = [];
-
-
 const getProduct = () => {
-
   let id = Math.random()
 
   let product = {
@@ -33,10 +29,8 @@ const getProduct = () => {
     price: price.value,
     desc: desc.value,
   };
-
-
   let getLocalEl = localStorage.getItem("products");
- let products = JSON.parse(getLocalEl);
+  let products = JSON.parse(getLocalEl);
   let productsInit = []
 
   if (getLocalEl) {
@@ -60,7 +54,11 @@ const getProduct = () => {
 
 addProductBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  getProduct();
+  if (imgUrl.value === '' || productName.value === '' || quantity.value === '' || price.value === '' || desc.value === ''){
+    alert('Please, Fill in the required Feild')
+  }else {
+    getProduct();
+  }
 });
 
 const populateTable = () => {
