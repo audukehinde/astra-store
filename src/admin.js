@@ -66,7 +66,7 @@ const populateTable = () => {
     row.append(tableData(element.url));
     row.append(tableData(element.name));
     row.append(tableData(element.quantity));
-    row.append(tableData(element.price));
+    row.append(tableData('#' + element.price));
     row.append(tableData(element.desc));
     row.append(actions(element.id));
 
