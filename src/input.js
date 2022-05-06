@@ -53,20 +53,25 @@
 // // }
     
     
-    function hello (){
-        // e.prevenDefault()
+     function hello (){
+//         // e.prevenDefault()
    const username= document.getElementById("username").value;
    const password = document.getElementById("password").value;
 
         if ( username === "admin" && password === "admin" ){ 
-        // alert ( "Welcome admin")
-        window.location = './home.html' 
-    }
+        //  alert ( "Welcome admin")
+      
+             
+        window.location.href = "https://www.w3docs.com/";
+       
+    }  
     
 
         else if (username === "user" && password === "user"){
             // alert("welcome 😊")
+           
             window.location = './home.html' 
+            
             
 
         }
@@ -77,16 +82,17 @@
         }
 
     }
-
-    // const showpasswordIcon = document.getElementById('show-password');
-    // const password = document.getElementById('password');
-    // showpasswordIcon.addEventListener('click', ()=> {
-    //     if (password.type === "password"){
-    //         // password.type = "text";
-    //         alert("ksksk")
-    //     }
-    //     else {
-    //         password.type = "password"
-    //     }
+function letshow(){
+    const showpasswordIcon = document.getElementById('show');
+    const password = document.getElementById('password');
+    showpasswordIcon.addEventListener('click' , ()=> {
+        if (password.type === "password"){
+             password.type = "text";
+            // alert("ksksk")
+        }
+        else {
+            password.type = "password"
+        }
        
-    // })
+    })
+}
