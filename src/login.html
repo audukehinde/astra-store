@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="/src/input.js"></script>
+</head>
+<body class=" bg-cover bg-no-repeat h-screen" style="
+background-image: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+  ),
+  url('/img/bb.png');
+">
+  <nav class="bg-myblue w-full p-4 text-white text-2xl">ASTRA STORE</nav>
+
+  <div class="container">
+    <div class="container mx-auto mt-32 flex flex-col justify-center items-center md:flex-row ">
+
+      <div class="py-12 px-2 text-center md:ml-24" >
+        <h1 class="text-6xl font-light text-white">
+          Welcome </h1></br>
+          <h1 class="text-6xl font-bold pt-1.5 text-white">ASTRA STORE</h1>
+      </div>    
+            
+          <form class="max-w-sm py-20 px-10 bg-myblue opacity:4 sm:w-full md:ml-24">
+            <div class="flex items-center border-b border-grey pt-3 py-4">
+              <input required class="appearance-none  bg-transparent border-none w-full text-gray-700 bg-myblue mr-3 py-1 px-2 leading-tight focus:outline-none" id="username" type="text" placeholder="Username" aria-label="Full name">
+    
+            </div>
+            <div class="mt-8 flex items-center border-b border-grey pb-3 py-4  x-data="{ show:true  }>
+              <input required class="appearance-none bg-myblue bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="password" id="password" placeholder="Password" aria-label="Full name">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 cursor-pointer" viewBox="0 0 20 20" fill="grey" id="show-password" ">
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            
+            <div class="pt-10 flex justify-center ">
+              <button class="flex-shrink-0 hover:bg-grey text-2xl text-black pt-2 py-3 px-8 rounded bg-white font-semibold   " type="submit" onclick="hello()">
+              Log In
+              </button>
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <a href="#" class="text-grey ml-8"> forgot password?</a>
+            </div>
+          </form>
+    </div>
+</div>
+</body>
+</html>
